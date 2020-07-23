@@ -1,0 +1,23 @@
+{
+  "name": "movie-api",
+  "version": "1.0.0",
+  "description": "Dicoding Submission",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amhanisa/movie-api.git"
+  },
+  "author": "Azka Muhammad Hanisa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amhanisa/movie-api/issues"
+  },
+  "homepage": "https://github.com/amhanisa/movie-api#readme",
+  "devDependencies": {
+    "webpack": "^4.43.0",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
