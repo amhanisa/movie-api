@@ -24,6 +24,22 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: "./src/index.html"
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'discover.html',
+            template: './src/discover.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'tvseries.html',
+            template: './src/tvseries.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'search.html',
+            template: './src/search.html'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'detail.html',
+            template: './src/detail.html'
         })
     ]
 };

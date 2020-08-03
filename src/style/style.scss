@@ -1,1 +1,212 @@
+$palette-darker: #222831;
+$palette-dark:#393e46;
+$palette-primary-dark: #00adb5;
+$palette-primary: #00fff5;
+
+$primary: $palette-primary;
+$dark: $palette-darker;
+$body-bg: #222222;
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,700;0,900;1,300&display=swap');
+
+$font-family-base: "Source Sans Pro",
+sans-serif;
+
 @import "bootstrap/scss/bootstrap";
+
+// * {
+//     border: 1px solid red;
+// }
+.text-not-so-white {
+    color: #cccccc;
+}
+
+.carousel-item {
+    height: 100vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    box-shadow: 0 0 1000px rgba(0, 0, 0, 1) inset;
+}
+
+nav-bar {
+    transition: 0.8s;
+
+    .bg-dark {
+        transition: 1s;
+        box-shadow: 0px 0px 20px $body-bg;
+    }
+}
+
+.searchbar {
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 4px !important;
+    border-radius: 42px;
+    border: 2px solid $primary;
+    transition: 0.4s;
+
+    .search-input {
+        color: white;
+        // caret-color: transparent;
+        background: none;
+        border: 0;
+        // display: none;
+        width: 0px;
+        padding: 0px;
+        // margin: 0;
+        outline: 0;
+        transition: width 0.4s;
+    }
+
+    .search-icon {
+        height: 26px;
+        width: 26px;
+        float: right;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        border: 0;
+        color: white;
+        background-color: transparent;
+    }
+
+    &:hover {
+        background-color: $body-bg;
+        transition: 0.4s;
+
+        >.search-input {
+            transition: width 0.4s;
+            display: inline-block;
+            padding: 0px 10px;
+            width: 300px;
+        }
+
+        >.search-icon {
+            color: $dark;
+            background-color: $primary;
+        }
+    }
+}
+
+.carousel-title {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+
+    &:hover {
+        transition: 0.3s;
+        color: $primary;
+        text-decoration: none;
+    }
+}
+
+.film-card-holder {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: 0.3s;
+    background-color: $palette-dark;
+
+    &:hover {
+        transition: 0.3s;
+        transform: scale(1.05);
+    }
+
+    .film-card-title {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.film-container {
+    min-height: 700px;
+    height: 100%;
+
+    .film-background,
+    .film-overlay {
+        position: absolute;
+        background-position: center;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+
+    }
+
+    .film-overlay {
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 2;
+    }
+
+    .film-detail {
+        position: relative;
+        z-index: 3;
+        // height: 100%;
+        padding-top: 100px;
+
+        .film-data {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+        }
+    }
+}
+
+.search-padding {
+    padding-top: 100px;
+}
+
+.search-item {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    background-color: $palette-dark;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    max-height: 200px;
+
+    .search-poster {
+        // flex-grow: 1;
+        min-width: 150px;
+        max-width: 150px;
+        // flex-basis: 150px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .search-detail {
+        flex-grow: 1;
+        padding: 20px;
+    }
+}
+
+.film-discover {
+    margin-top: 100px;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 200px;
+}
+
+footer-custom {
+    z-index: 3;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
